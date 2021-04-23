@@ -1,0 +1,18 @@
+Path: R3 | Node: 3 | Parent: root | link: Head-3 | Count: 4
+Path: R36 | Node: 6 | Parent: 3 | link: Head-6 | Count: 3
+Path: R361 | Node: 1 | Parent: 6 | link: Head-1 | Count: 3
+Path: R3614 | Node: 4 | Parent: 1 | link: Head-4 | Count: 2
+Path: R36145 | Node: 5 | Parent: 4 | link: Head-5 | Count: 2
+Path: R3612 | Node: 2 | Parent: 1 | link: Head-2 | Count: 1
+Path: R36124 | Node: 4 | Parent: 2 | link: R3614 | Count: 1
+Path: R32 | Node: 2 | Parent: 3 | link: R3612 | Count: 1
+Path: R6 | Node: 6 | Parent: root | link: R36 | Count: 1
+Path: R62 | Node: 2 | Parent: 6 | link: R32 | Count: 1
+Path: R625 | Node: 5 | Parent: 2 | link: R36145 | Count: 1
+-----------------------------------------
+Tree saved in fp-tree-ascii-graph.txt
+-----------------------------------------
+Tree saved in fp-tree-visual-graph.png
+-----------------------------------------
+Items frequent list (ordered) (MIN_SUP=1):
+{'3': 4, '6': 4, '1': 3, '2': 3, '4': 3, '5': 3}

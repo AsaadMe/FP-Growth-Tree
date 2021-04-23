@@ -1,0 +1,12 @@
+root: 1 
+├── 3: 4 (Link=Head-3)
+│   ├── 6: 3 (Link=Head-6)
+│   │   └── 1: 3 (Link=Head-1)
+│   │       ├── 4: 2 (Link=Head-4)
+│   │       │   └── 5: 2 (Link=Head-5)
+│   │       └── 2: 1 (Link=Head-2)
+│   │           └── 4: 1 (Link=R3614)
+│   └── 2: 1 (Link=R3612)
+└── 6: 1 (Link=R36)
+    └── 2: 1 (Link=R32)
+        └── 5: 1 (Link=R36145)
