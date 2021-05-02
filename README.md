@@ -11,6 +11,6 @@ Generate FP-Growth Tree of a dataset with visualized graph output.
 
 ----------------------
 
-### example:
+### Example:
 
-![example](output/example.jpg)
+![example](output/example2.jpg)

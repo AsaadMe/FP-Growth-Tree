@@ -36,8 +36,9 @@ class  FpTree:
 
         if path_to_root not in self.tree_nodes:
             cur_node = FpNode(cur_item, path_to_root, parent_node,
-                              self.last_nodes[cur_item], further_items[cur_item])
+                              None, further_items[cur_item])
 
+            self.last_nodes[cur_item].link = cur_node
             self.last_nodes[cur_item] = cur_node
             self.tree_nodes[path_to_root] = cur_node
 
@@ -55,8 +56,12 @@ class  FpTree:
         """Print each node of the fp-tree on terminal."""
 
         for node_path, node in self.tree_nodes.items():
+            if node.link:
+                link_p = node.link.path_to_root
+            else:
+                link_p = "None"
             print(f"Path: {node_path} | Node: {node.name} | Parent: {node.parent.name} | "
-            f"link: {node.link.path_to_root} | Count: {node.count}")
+            f"link: {link_p} | Count: {node.count}")
 
     def save_ascii_tree(self, root_node):
         """Save fp-tree structure graph in ASCII format."""
@@ -66,7 +71,11 @@ class  FpTree:
                 if node.name == "root":
                     treestr = f"{pre}{node.name}: {node.count}"
                 else:
-                    treestr = f"{pre}{node.name}: {node.count} (Link={node.link.path_to_root})"
+                    if node.link:
+                        link_p = node.link.path_to_root
+                    else:
+                        link_p = "None"
+                    treestr = f"{pre}{node.name}: {node.count} (Link={link_p})"
                 outfile.write(treestr.ljust(8)+'\n')
 
         print("-----------------------------------------\n"
