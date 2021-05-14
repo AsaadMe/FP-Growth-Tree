@@ -1,6 +1,6 @@
 # Tested on python=3.9
 # -> dicts should hold insertion order (python>=3.6).
-# "UniqueDotExporter" requires Graphiz program to be installed.
+# "UniqueDotExporter" requires Graphviz program to be installed.
 
 from anytree import NodeMixin, RenderTree
 from anytree.exporter import UniqueDotExporter
@@ -9,7 +9,7 @@ class FpNode(NodeMixin):
     """Nodes of the fp-tree."""
 
     def __init__(self, name, path_to_root:str=None, parent=None, link=None, count=1):
-        super(FpNode, self).__init__()
+        super().__init__()
         self.count = count
         self.name = name
         self.parent = parent
